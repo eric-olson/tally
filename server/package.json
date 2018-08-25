@@ -1,0 +1,13 @@
+{
+  "name": "tally-server",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node tally-handler"
+  },
+  "dependencies": {
+    "debug": "~2.6.9",
+    "dgram": "^1.0.1",
+    "tsl-umd": "^1.0.1"
+  }
+}
