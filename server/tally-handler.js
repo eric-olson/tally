@@ -32,11 +32,9 @@ var updateTally = function(state, ips) {
     var msg = off;
     if (recvState == tallyStates.PGM) {
       msg = pgm;
-	    console.log("PGM");
     }
     else if (recvState == tallyStates.PVW) {
       msg = pvw;
-	    console.log("PVW");
     }
 
     // create socket and send message to tally light
@@ -62,9 +60,9 @@ var ips = {
 };
 
 var state = {
-  5: tallyStates.OFF,
   3: tallyStates.OFF,
   4: tallyStates.OFF,
+  5: tallyStates.OFF,
 };
 
 console.log("IP Mappings: ", ips);
@@ -74,7 +72,7 @@ umd.on('message', function(tally) {
   //console.log("Tally update:", tally);
 
   // update state with new info
-  // reminder: tally 2 from carbonite is PGM, and IDs are 1-36 (0 is black)
+  // reminder: tally2 from carbonite is PGM, tally1 is PVW, and IDs are 1-36 (0 is black)
 
   var tallyAddr = tally['address'];
   // filter out non-input tally values
