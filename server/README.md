@@ -16,15 +16,18 @@ the location of `tally-handler.js` (`ExecStart`) and its' parent folder,
 `server` (`WorkingDirectory`). The file should then be moved to `/etc/systemd`.
 
 Once the service is set up, it can be controlled with the following commands:
-- To control whether the service starts on boot
+- To control whether the service starts on boot:
+
     sudo systemctl enable tally-server
     sudo systemctl disable tally-server
 
-- To start and stop the service
+- To start and stop the service:
+
     sudo systemctl start tally-server
     sudo systemctl stop tally-server
 
-- To restart the service
+- To restart the service:
+
     sudo systemctl status tally-server
 
 ## Note on configuration
